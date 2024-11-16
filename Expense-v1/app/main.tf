@@ -7,7 +7,7 @@ resource "aws_instance" "ec2-node" {
   }
 }
 
-resource "aws_route53_zone" "record" {
+resource "aws_route53_record" "record" {
   zone_id = var.zone_id
   name    = "$(var.name)-dev.doubtfree.online"
   type    = "A"
