@@ -8,7 +8,7 @@ output "zone" {
 }
 
 data "aws_security_group" "example" {
-  id = "sg-064a6677c666b0183"
+  name = "Allow-all"
 }
 
 output "security_group" {
