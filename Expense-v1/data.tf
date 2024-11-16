@@ -8,9 +8,12 @@ output "zone" {
 }
 
 data "aws_security_group" "example" {
-  name = "launch-wizard-3"
-  value= ["Allow-all"]
+  filter {
+    name   = "group-name"
+    values = ["launch-wizard-3"]
+  }
 }
+
 
 output "security_group" {
   value = data.aws_security_group.example
