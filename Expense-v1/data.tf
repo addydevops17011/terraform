@@ -8,7 +8,7 @@ output "zone" {
 }
 
 data "aws_security_group" "example" {
-  name = "group-name"
+  name = "launch-wizard-3"
   value= ["Allow-all"]
 }
 
