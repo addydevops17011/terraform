@@ -9,7 +9,7 @@ output "zone" {
 
 data "aws_security_group" "example" {
   name = "group-name"
-  values= ["Allow-all"]
+  value= ["Allow-all"]
 }
 
 output "security_group" {
