@@ -8,7 +8,8 @@ output "zone" {
 }
 
 data "aws_security_group" "example" {
-  name = "Allow-all"
+  name = "group-name"
+  values= ["Allow-all"]
 }
 
 output "security_group" {
@@ -18,5 +19,5 @@ output "security_group" {
 data "aws_ami" "ami1" {
   most_recent = true
   name_regex  = "RHEL-9-DevOps-Practice"
-  owners      = ["886436953886"]
+  owners      = ["973714476881"]
 }
