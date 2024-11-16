@@ -8,3 +8,10 @@ module "app" {
   zone_id                = data.aws_route53_zone.main.zone_id
 }
 
+terraform {
+  backend "s3" {
+    bucket = "vadali-terraform"
+    key    = "terraform/Expense-v1/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
