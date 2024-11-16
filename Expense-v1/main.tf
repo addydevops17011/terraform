@@ -1,9 +1,9 @@
 module "app" {
   for_each               = var.components
   source                 = "./app"
-  ami                    = var.ami1
+  ami                    = data.aws_ami.ami1.id
   instance_type          = each.value.instance_type
-  vpc_security_group_ids = var.vpc_security_group_ids1
+  vpc_security_group_ids = [data.aws_security_group.example.id]
   name                   = each.key
   zone_id                = data.aws_route53_zone.main.zone_id
 }

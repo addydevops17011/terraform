@@ -15,7 +15,5 @@ variable "components" {
 variable "ami1" {
   default = "ami-09c813fb71547fc4f"
 }
-variable "vpc_security_group_ids1" {
-  default = ["sg-064a6677c666b0183"]
-}
+
 
